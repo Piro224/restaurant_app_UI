@@ -19,6 +19,7 @@ List <dynamic>friedChicken = [
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      physics: BouncingScrollPhysics(),
       itemCount: friedChicken.length,
       padding: EdgeInsets.all(12),
       gridDelegate: 
