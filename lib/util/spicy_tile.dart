@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: prefer_typing_uninitialized_variables
 
+import 'package:flutter/material.dart';
 
 class CrispyTile extends StatelessWidget {
   final String crispyDish;
@@ -29,7 +30,7 @@ class CrispyTile extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(12),
                           topRight: Radius.circular(12)),
                       color: crispyColor[100]),
@@ -38,7 +39,7 @@ class CrispyTile extends StatelessWidget {
                     child: Text(
                       "\$$crispyPrice",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                 ),
@@ -49,10 +50,16 @@ class CrispyTile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               child: SizedBox(
-                
-                child: Image.asset(
-                  crispyimage,
-                  fit: BoxFit.fill,
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      crispyimage,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -61,7 +68,7 @@ class CrispyTile extends StatelessWidget {
             Center(
                 child: Text(
               crispyDish,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
             )),
             const SizedBox(
               height: 3,
@@ -80,14 +87,14 @@ class CrispyTile extends StatelessWidget {
                 //favourite icon
                 children: [
                   IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.favorite,
                       color: Colors.red,
                     ),
                     onPressed: () {},
                   ),
                   IconButton(
-                    icon: Icon(Icons.add),
+                    icon: const Icon(Icons.add),
                     onPressed: () {},
                   ),
                 ],

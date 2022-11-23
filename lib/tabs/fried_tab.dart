@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/util/fried_tile.dart';
@@ -10,9 +10,11 @@ List <dynamic>friedChicken = [
     ["Hamburger", "40", Colors.red, "assets/img/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-red-onion.webp"],
     ["Baked Drumsticks", "45", Colors.pink, "assets/img/baked-chicken-drumsticks-honey-mustard-marinade.webp"],
     ["Half-grilled", "60", Colors.green, "assets/img/half-grilled-chicken-plate.webp"],
-    ["Baked with Appetizer", "55", Colors.deepOrange, "assets/img/white-appetizer-lunch-meal-baked.webp"],
-    ["Chicken Breast Burger", "70", Colors.purple, "assets/img/tasty-healthy-burgers-with-chicken-breast.webp"],
+    ["Baked Chicken", "55", Colors.deepOrange, "assets/img/white-appetizer-lunch-meal-baked.webp"],
+    ["Chicken Burger", "70", Colors.purple, "assets/img/tasty-healthy-burgers-with-chicken-breast.webp"],
   ];
+
+  FriedView({super.key});
 
   @override
   Widget build(BuildContext context) {

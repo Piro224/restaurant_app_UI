@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/util/crispy_tile.dart';
@@ -13,6 +13,8 @@ List <dynamic>crispyChicken = [
     ["Baked with Tabaka", "55", Colors.deepOrange, "assets/img/baked-chicken-tabaka-with-spices.webp"],
     ["Baked Quails", "70", Colors.purple, "assets/img/baked-quails-pan-dark-surface.webp"],
   ];
+
+  SpicyView({super.key});
 
   @override
   Widget build(BuildContext context) {

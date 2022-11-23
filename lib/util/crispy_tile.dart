@@ -50,10 +50,16 @@ class CrispyTile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               child: SizedBox(
-                
-                child: Image.asset(
-                  crispyimage,
-                  fit: BoxFit.fill,
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      crispyimage,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
             ),

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/util/crispy_tile.dart';
@@ -14,6 +14,8 @@ class WingsView  extends StatelessWidget {
     ["Baked with Tabaka", "55", Colors.deepOrange, "assets/img/baked-chicken-tabaka-with-spices.webp"],
     ["Baked Quails", "70", Colors.purple, "assets/img/baked-quails-pan-dark-surface.webp"],
   ];
+
+  WingsView({super.key});
 
   @override
   Widget build(BuildContext context) {

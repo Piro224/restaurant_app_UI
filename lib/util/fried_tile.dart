@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, prefer_const_constructors,
+// ignore_for_file: must_be_immutable, prefer_const_constructors,, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 
@@ -39,8 +39,8 @@ class FriedTile extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "\$$friedPrice",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 18),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                 ),
@@ -49,12 +49,18 @@ class FriedTile extends StatelessWidget {
 
             //image
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               child: SizedBox(
-                child: Image.asset(
-                  friedImage,
-                  fit: BoxFit.fill,
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      friedImage,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
             ),
