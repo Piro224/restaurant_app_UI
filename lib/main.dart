@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         
         backgroundColor: Colors.white,
-        scaffoldBackgroundColor: Colors.amber[500],
+        scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.red,
       ),
       home:  Home(),
